@@ -18,17 +18,6 @@ class _MyButtonNavBarState extends State<MyButtonNavBar> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          leading: IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: Icon(
-                Icons.menu,
-                color: Colors.black,
-              )),
-        ),
         body: Center(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
