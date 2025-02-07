@@ -37,7 +37,7 @@ class _MyButtonNavBarState extends State<MyButtonNavBar> {
               tabs: [
                 GButton(
                   icon: Icons.home,
-                  text: 'Home',
+                  text: 'home',
                 ),
                 GButton(
                   icon: Icons.shopping_bag_outlined,
