@@ -7,7 +7,7 @@ class MyButtonNavBar extends StatefulWidget {
 }
 
 class _MyButtonNavBarState extends State<MyButtonNavBar> {
-  int _selectedInd = 0;
+  int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
     Text('Home Page'),
