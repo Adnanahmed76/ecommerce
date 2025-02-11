@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class MyButtonNavBar extends StatelessWidget {
-  MyButtonNavBar({Key? key}) : super(key: key);
+  void Function(int)? OnTabChange;
+  MyButtonNavBar({Key? key, required this.OnTabChange}) : super(key: key);
 
   final ValueNotifier<int> _selectedIndex = ValueNotifier<int>(0);
 
@@ -34,9 +35,7 @@ class MyButtonNavBar extends StatelessWidget {
             tabBackgroundColor: Colors.grey[100]!,
             color: Colors.black,
             selectedIndex: _selectedIndex.value, // Binding selected index
-            onTabChange: (index) {
-              _selectedIndex.value = index; // Updating the selected index
-            },
+            onTabChange: (value) => {},
             tabs: [
               GButton(
                 icon: Icons.home,
