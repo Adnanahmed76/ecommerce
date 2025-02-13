@@ -35,11 +35,7 @@ class IntroPage extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Text(
-                "Brand new sneakers and custom kicks premium quality",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w100),
-                textAlign: TextAlign.center,
-              ),
+
               SizedBox(
                 height: 30,
               ),
