@@ -79,6 +79,9 @@ class _ShopPageState extends State<ShopPage> {
                         itemBuilder: (context, index) {
                           //create a shoe
                           Shoe shoe = value.getShoesList()[index];
+
+                          //return the shoe
+                          return ShoeTile(shoe: shoe);
                         })),
                 Padding(
                   padding: const EdgeInsets.only(top: 25, left: 25, right: 25),

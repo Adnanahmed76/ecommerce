@@ -21,7 +21,11 @@ class MyButtonNavBar extends StatelessWidget {
           duration: Duration(milliseconds: 400),
           tabBackgroundColor: Colors.grey[100]!,
           color: Colors.black,
-          onTabChange: (value) => onTabChange, // Correct function call
+          onTabChange: (value) {
+            if (onTabChange != null) {
+              onTabChange!(value);
+            }
+          },
           tabs: [
             GButton(
               icon: Icons.home,

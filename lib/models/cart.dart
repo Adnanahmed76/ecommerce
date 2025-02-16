@@ -19,7 +19,13 @@ class Cart extends ChangeNotifier {
     Shoe(
         name: "Air jorden",
         price: "400",
-        imagePath: "lib/images/logo.jpg",
+        imagePath: "lib/images/airjordan.jpg",
+        description:
+            "you \'ve got the hops and the speed-lace up in shoes that enhance"),
+    Shoe(
+        name: "Air jorden",
+        price: "400",
+        imagePath: "lib/images/green.jpg",
         description:
             "you \'ve got the hops and the speed-lace up in shoes that enhance"),
   ];

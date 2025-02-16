@@ -9,7 +9,7 @@ class ShoeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 25),
-      width: 200,
+      width: 180,
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(30),
@@ -24,10 +24,15 @@ class ShoeTile extends StatelessWidget {
             ),
           ),
           //description
-
-          Text(
-            shoe.description,
-            style: TextStyle(color: Colors.grey),
+          SizedBox(
+            height: 5,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              shoe.description,
+              style: TextStyle(color: Colors.grey),
+            ),
           ),
 
           //price + details for product
@@ -45,7 +50,7 @@ class ShoeTile extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: 20),
+                          fontSize: 15),
                     ),
                     SizedBox(
                       height: 5,
@@ -60,14 +65,21 @@ class ShoeTile extends StatelessWidget {
                 ),
                 //plut button
                 Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.circular(20)),
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Center(
+                    // Center the icon
                     child: Icon(
                       Icons.add,
                       color: Colors.white,
-                    ))
+                      size: 20, // Adjust icon size
+                    ),
+                  ),
+                ),
               ],
             ),
           )
