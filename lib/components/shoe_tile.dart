@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class ShoeTile extends StatelessWidget {
   Shoe shoe;
-  ShoeTile({super.key, required this.shoe});
+  void Function()? onTap;
+  ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -63,20 +64,23 @@ class ShoeTile extends StatelessWidget {
                     )
                   ],
                 ),
-                //plut button
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: const Center(
-                    // Center the icon
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.white,
-                      size: 20, // Adjust icon size
+                //plus button
+                GestureDetector(
+                  onTap: onTap,
+                  child: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Center(
+                      // Center the icon
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 20, // Adjust icon size
+                      ),
                     ),
                   ),
                 ),
